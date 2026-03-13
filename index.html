@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>दूध रिकॉर्ड सिस्टम</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>दैनिक दूध रिकॉर्ड</h2>
+
+<div class="tabs">
+
+<button onclick="switchCustomer('गणेश')" class="active">गणेश</button>
+<button onclick="switchCustomer('सुधीर')">सुधीर</button>
+<button onclick="switchCustomer('सामने वाली')">सामने वाली</button>
+
+</div>
+
+<form id="milkForm">
+
+<select id="time">
+<option>सुबह</option>
+<option>शाम</option>
+</select>
+
+<select id="quantity">
+<option value="1">1 लीटर</option>
+<option value="0.5">½ लीटर</option>
+</select>
+
+<button type="submit" class="addBtn">दूध जोड़ें</button>
+
+</form>
+
+<table>
+
+<thead>
+<tr>
+<th>तारीख</th>
+<th>समय</th>
+<th>दूध (लीटर)</th>
+<th>Delete</th>
+</tr>
+</thead>
+
+<tbody id="tableData"></tbody>
+
+</table>
+
+<div class="total">
+कुल दूध: <span id="totalMilk">0</span> लीटर
+</div>
+
+<div class="total">
+कुल रुपये: ₹<span id="totalMoney">0</span>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
