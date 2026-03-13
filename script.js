@@ -9,15 +9,10 @@ function switchCustomer(name){
 currentCustomer=name
 
 document.querySelectorAll(".tabs button").forEach(btn=>{
-
 btn.classList.remove("active")
-
 if(btn.innerText===name){
-
 btn.classList.add("active")
-
 }
-
 })
 
 showData()
@@ -51,9 +46,7 @@ table.innerHTML+=`
 
 document.getElementById("totalMilk").innerText=total
 
-let money=total*50
-
-document.getElementById("totalMoney").innerText=money
+document.getElementById("totalMoney").innerText=total*50
 
 }
 
@@ -74,11 +67,8 @@ e.preventDefault()
 let date=document.getElementById("date").value
 
 if(date===""){
-
-alert("कृपया तारीख चुनें")
-
+alert("तारीख चुनें")
 return
-
 }
 
 let record={
@@ -99,3 +89,26 @@ showData()
 })
 
 showData()
+
+
+/* INSTALL BUTTON */
+
+let deferredPrompt
+
+const installBtn=document.getElementById("installBtn")
+
+window.addEventListener("beforeinstallprompt",(e)=>{
+
+e.preventDefault()
+
+deferredPrompt=e
+
+installBtn.style.display="block"
+
+})
+
+installBtn.addEventListener("click",()=>{
+
+deferredPrompt.prompt()
+
+})
