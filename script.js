@@ -1,4 +1,3 @@
-
 let currentCustomer="गणेश"
 
 let data=JSON.parse(localStorage.getItem("milkData")) || []
@@ -10,10 +9,15 @@ function switchCustomer(name){
 currentCustomer=name
 
 document.querySelectorAll(".tabs button").forEach(btn=>{
+
 btn.classList.remove("active")
+
 if(btn.innerText===name){
+
 btn.classList.add("active")
+
 }
+
 })
 
 showData()
@@ -47,7 +51,7 @@ table.innerHTML+=`
 
 document.getElementById("totalMilk").innerText=total
 
-let money = total * 50
+let money=total*50
 
 document.getElementById("totalMoney").innerText=money
 
@@ -67,10 +71,20 @@ document.getElementById("milkForm").addEventListener("submit",function(e){
 
 e.preventDefault()
 
+let date=document.getElementById("date").value
+
+if(date===""){
+
+alert("कृपया तारीख चुनें")
+
+return
+
+}
+
 let record={
 
 customer:currentCustomer,
-date:new Date().toLocaleDateString("hi-IN"),
+date:date,
 time:document.getElementById("time").value,
 qty:document.getElementById("quantity").value
 

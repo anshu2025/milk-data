@@ -1,36 +1,40 @@
-
-
 body{
-font-family:Arial, sans-serif;
+
+font-family:Arial;
 background:#f4f6f9;
 margin:0;
 padding:20px;
+
 }
 
 .container{
+
 max-width:900px;
 margin:auto;
 background:white;
 padding:20px;
 border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
+
 }
 
 h2{
+
 text-align:center;
-margin-bottom:20px;
+
 }
 
-/* Tabs */
-
 .tabs{
+
 display:flex;
 gap:10px;
 margin-bottom:20px;
 flex-wrap:wrap;
+
 }
 
 .tabs button{
+
 flex:1;
 padding:12px;
 border:none;
@@ -38,82 +42,95 @@ background:#ddd;
 cursor:pointer;
 border-radius:5px;
 font-size:16px;
+
 }
 
 .tabs button.active{
+
 background:#007bff;
 color:white;
+
 }
 
-/* Form */
-
 form{
+
 display:flex;
 gap:10px;
 flex-wrap:wrap;
 margin-bottom:20px;
+
 }
 
-select,button{
+select,input,button{
+
 padding:10px;
 font-size:16px;
+
 }
 
 .addBtn{
+
 background:#28a745;
 color:white;
 border:none;
 border-radius:5px;
 cursor:pointer;
+
 }
 
-/* Table */
-
 table{
+
 width:100%;
 border-collapse:collapse;
+
 }
 
 th,td{
+
 border:1px solid #ddd;
 padding:8px;
 text-align:center;
+
 }
 
 th{
+
 background:#007bff;
 color:white;
+
 }
 
-/* Delete */
-
 .deleteBtn{
+
 background:red;
 color:white;
 border:none;
 padding:5px 10px;
 border-radius:5px;
 cursor:pointer;
+
 }
 
-/* Totals */
-
 .total{
+
 margin-top:15px;
 font-weight:bold;
 font-size:18px;
-}
 
-/* Mobile */
+}
 
 @media(max-width:600px){
 
 form{
+
 flex-direction:column;
+
 }
 
 .tabs{
+
 flex-direction:column;
+
 }
 
 }
